@@ -2,52 +2,17 @@
 import { storeState, changeState, stateGenerator } from "./../src/haiku.js";
 
 describe("Haiku", () => {
-  const plant = storeState();
+  const wordHaiku = storeState();
+  const haiku = {
+    firstLine: "Epicodus is fun",
+    secondLine: "We are learning to program",
+    thirdLine: "So we can get jobs",
+  };
+  // const syllableCount = storeState();
 
-  test("should create a plant object", () => {
-    expect(plant().soil).toBe(0);
-    expect(plant().water).toBe(0);
-    expect(plant().light).toBe(0);
-  });
-
-  test("should be able to use change state function", () => {
-    const blueFood = changeState("soil")(5);
-    plant(blueFood);
-    expect(plant().soil).toBe(5);
-  });
-
-  test("plant should be waterable", () => {
-    plant(changeState("water")(10));
-    expect(plant().water).toBe(10);
-  });
-
-  test("should be sunlit", () => {
-    const yellowFood = changeState("light")(8);
-    plant(yellowFood);
-    expect(plant().light).toBe(8);
-  });
-
-  test("should be able to generate plants with stateGenerator", () => {
-    const plantCreator = stateGenerator();
-    const newPlant = plantCreator();
-    expect(newPlant().soil).toBe(0);
-    expect(newPlant().water).toBe(0);
-    expect(newPlant().light).toBe(0);
-    expect(newPlant().name).toBe("plant1");
-  });
-
-  test("should be able to generate multiple plants", () => {
-    const plantCreator = stateGenerator();
-    const plant1 = plantCreator();
-    const plant2 = plantCreator();
-    expect(plant1().name).toBe("plant1");
-    expect(plant2().name).toBe("plant2");
-  });
-
-  test("should be able to increment values of generated plants", () => {
-    const plantCreater = stateGenerator();
-    const newPlant = plantCreater();
-    newPlant(changeState("soil")(5));
-    expect(newPlant().soil).toBe(5);
+  test("should count the number of syllables in a string", () => {
+    expect(syllableCount(haiku.firstLine).toBe(5));
+    expect(syllableCount(haiku.secondLine).toBe(7));
+    expect(syllableCount(haiku.thirdLine).toBe(5));
   });
 });
