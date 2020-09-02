@@ -1,36 +1,11 @@
-const initialState = {
-  soil: 0,
-  water: 0,
-  light: 0
-};
-
-export const stateGenerator = () => {
-  let count = 0;
-  return () => {
-    count++;
-    let currentState = {...initialState, name: "plant"+count};
-    return (stateChangeFunction = state => state) => {
-      const newState = stateChangeFunction(currentState);
-      currentState = {...newState};
-      return newState;
-    };
-  };
-};
-
-export const storeState = () => {
-  let currentState = {...initialState};
-  return (stateChangeFunction = state => state) => {
-    const newState = stateChangeFunction(currentState);
-    currentState = {...newState};
-    return newState;
-  };
-};
-
-export const changeState = (prop) => {
-  return (value) => {
-    return (state) => ({
-      ...state,
-      [prop] : (state[prop] || 0) + value
-    });
-  };
+const wordIntake = ``; //pls show me how to do it the way you saw it w/the const=fxn=fatarrow
+const syllableCount = (wordIntake) => {
+  for (let i = wordIntake.length; i <= 0; i--) {
+    if (`a` || `e` || `i` || `o` || `u`) {
+      return i++;
+    } else
+      () => {
+        return i;
+      };
+  }
 };
