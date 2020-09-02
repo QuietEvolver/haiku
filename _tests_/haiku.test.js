@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
-import { storeState, changeState, stateGenerator } from "./../src/plant.js";
+import { storeState, changeState, stateGenerator } from "./../src/haiku.js";
 
-describe("Plant", () => {
+describe("Haiku", () => {
   const plant = storeState();
 
   test("should create a plant object", () => {

@@ -1,20 +1,19 @@
 # _Haiku Checker_
 
-#### _An application for feeding plants, 9.2.2020_
+#### _An application for feeding haikus, 9.2.2020_
 
 #### By _**Jeff Kim and Vera Weikel**_
 
 ## Description
 
-_An application that explores closures and states in the context of a game about plants._
+_An application that explores closures and states in the context of a validation checker about haikus._
 
 ## Specifications
 
-| Spec                              |         Input          |                              Output |
-| :-------------------------------- | :--------------------: | ----------------------------------: |
-| Program can create a Haiku object | User clicks "New Game" |                Haiku object created |
-| Program can update Haiku values   |   User clicks "Feed"   |           Haiku poem values checked |
-| Program can report Haiku values   |          None          | poem display shows value validation |
+| Spec                                                                                           |                                      Input                                      |                            Output |
+| :--------------------------------------------------------------------------------------------- | :-----------------------------------------------------------------------------: | --------------------------------: |
+| Program can determine the number of syllables in a string                                      |                                   "majestic"                                    |                       3 syllables |
+| Program can check for the number of "lines" by ensuring there are 17 syllables total (5, 7, 5) | "majestic", "Epicodus is fun / We are learning to program / So we can get jobs" | "Not a haiku", "Successful Haiku" |
 
 ## Setup/Installation Requirements
 
