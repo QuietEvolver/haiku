@@ -1,6 +1,6 @@
 # _Haiku Checker_
 
-#### _An application for feeding haikus, 9.2.2020_
+#### _An application for haikus, 9.2.2020_
 
 #### By _**Jeff Kim and Vera Weikel**_
 
