@@ -2,18 +2,15 @@
 import "./styles.css";
 import { syllableCount } from "./haiku";
 
-const haikuSubmitted = new FormData("#haiku-form");
+const haikuSubmitted = new FormData();
 
 const firstLine = document.getElementById("first-line");
 const secondLine = document.getElementById("second-line");
 const thirdLine = document.getElementById("third-line");
-let haiku = haikuSubmitted;
-haiku = document.getElementById.Object.assign(
-  {},
-  ...firstLine,
-  ...secondLine,
-  ...thirdLine
-);
+let //haiku = haikuSubmitted;
+  haiku = document.getElementById.haikuSubmitted(
+    Object.assign({}, ...firstLine, ...secondLine, ...thirdLine)
+  );
 //haikuSubmitted.append(firstLine, secondLine, thirdLine);
 function haikuChecker() {
   document.getElementById("return-first-line-value").innerHTML = syllableCount(
