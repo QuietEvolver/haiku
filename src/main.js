@@ -7,17 +7,17 @@ const haikuFormElem = document.querySelector("#haiku-form");
 haikuFormElem.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const haikuSubmitted = new FormData(haikuFormElem);
+  const haiku = Object.assign{};
 
   const firstLine = document.getElementById("first-line");
   const secondLine = document.getElementById("second-line");
   const thirdLine = document.getElementById("third-line");
-  let haiku = Object.assign({}, firstLine, secondLine, thirdLine);
+   haiku(firstLine, secondLine, thirdLine);
 
-  const haikuBlob = new Blob(haikuSubmitted, "#return-haiku-poem");
+  //const haikuPoem = document.getElementById( "#return-haiku-poem");
   //haiku = haikuSubmitted;
 
-  haikuSubmitted.append(firstLine, secondLine, thirdLine, haikuBlob);
+  haikuSubmitted.append(firstLine, secondLine, thirdLine);
 
   //document.getElementById.haikuSubmitted(haiku); //??
 
