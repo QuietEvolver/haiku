@@ -14,10 +14,7 @@ haikuFormElem.addEventListener("submit", (e) => {
   const thirdLine = document.getElementById("third-line");
   let haiku = Object.assign({}, firstLine, secondLine, thirdLine);
 
-  const haikuBlob = new Blob(
-    haikuSubmitted,
-    Blob.prototype.text("#return-haiku-poem")
-  );
+  const haikuBlob = new Blob(haikuSubmitted, "#return-haiku-poem");
   //haiku = haikuSubmitted;
 
   haikuSubmitted.append(firstLine, secondLine, thirdLine, haikuBlob);
