@@ -6,7 +6,7 @@ describe("syllableCount", () => {
   const haiku = {
     firstLine: "Epicodus rocks",
     secondLine: "We are learning to program",
-    thirdLine: "lie lie lie lie lie", //"So we can get jobs",
+    thirdLine: "So we can get jobs",
   };
   // const syllableCount = storeState();
 

@@ -8,9 +8,17 @@
       <div class="page-header">
         <h1>Your Haiku Checker</h1>
       </div>
-      <form>
-      <label for="haiku"> Input Haiku: <input id='haiku' type="text" name = "haiku"></label>
-      <input id='haiku' type="submit">
+      <form id = "haiku-form">
+        <!-- nested inputs save on divs is all -->
+      <label for="first-line"> Input Haiku's First Line: <input id='first-line"' type="text" name = "first-line"></label>
+
+      <label for="second-line"> Input Haiku Second Line: <input id='second-line' type="text" name = "second-line"></label>
+
+      <label for="third-line"> Input Haiku Third Line: <input id='third-line' type="text" name = "third-line"></label>
+
+      <button id='button-submit' type="submit">Submit</button>
       </form>
+
+      
   </body>
 </html>
